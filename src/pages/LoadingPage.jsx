@@ -1,6 +1,6 @@
 import { useOutletContext } from "react-router-dom";
 
-export default function DailyLogPage() {
+export default function LoadingPage() {
   const { pageTitle } = useOutletContext();
 
   return <div className="capitalize">{pageTitle}</div>;

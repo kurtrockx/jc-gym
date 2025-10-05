@@ -1,9 +1,13 @@
+import { useOutletContext } from "react-router-dom";
+
 export default function DashboardPage() {
+  const { pageTitle } = useOutletContext();
+
   return (
     <div className="relative z-1 flex flex-1 flex-col max-md:pb-40">
       {/* yellow top */}
       <div className="flex flex-2/5 flex-col justify-between bg-[#f9a826] p-4 pb-0 max-xl:gap-4 md:p-12 md:pb-0">
-        <h1 className="mx-auto w-[88%] text-5xl">Dashboard</h1>
+        <h1 className="mx-auto w-[88%] text-5xl capitalize">{pageTitle}</h1>
         {/* topbox */}
         <div className="mx-auto flex w-[88%] flex-col justify-between rounded-tl-2xl rounded-tr-2xl border-1 bg-white px-4 md:pt-4 xl:h-[46%] 2xl:h-[56%] 2xl:px-8 2xl:pt-10">
           <h1 className="text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl">
