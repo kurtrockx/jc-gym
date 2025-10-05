@@ -1,8 +1,17 @@
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
+import { Outlet } from "react-router-dom";
 
-export default function App() {
+function App() {
   return (
-    <div>
-      JC Good Health GYM      
+    <div className="flex h-dvh flex-col">
+      <Navbar />
+      <div className="flex h-full">
+        <Sidebar />
+        <Outlet />
+      </div>
     </div>
-  )
+  );
 }
+
+export default App;
