@@ -6,9 +6,11 @@ function App() {
   return (
     <div className="flex h-dvh flex-col">
       <Navbar />
-      <div className="flex h-full">
+      <div className="flex h-full overflow-hidden">
         <Sidebar />
-        <Outlet />
+        <div className="flex-1 overflow-y-auto z-10">
+          <Outlet />
+        </div>
       </div>
     </div>
   );

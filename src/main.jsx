@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import "./index.css";
 import App from "./App.jsx";
-import Login from "./pages/Login.jsx";
+import DashboardPage from "./pages/DashboardPage.jsx";
 
 const [loggedIn, setLoggedIn] = "admin";
 
@@ -15,12 +15,16 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    /*     children: [
+    children: [
       {
         index: true,
-        element: <Login />,
+        element: <Navigate to="dashboard" replace />,
       },
-    ], */
+      {
+        path: "dashboard",
+        element: <DashboardPage />,
+      },
+    ],
   },
 ]);
 
