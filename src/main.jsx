@@ -15,6 +15,7 @@ import DailyLogPage from "./pages/DailyLog/DailyLogPage.jsx";
 import InventoryPage from "./pages/Inventory/InventoryPage.jsx";
 import RevenuePage from "./pages/Revenue/RevenuePage.jsx";
 import EditMemberPage from "./pages/Membership/EditMemberPage.jsx";
+import AddMemberPage from "./pages/Membership/AddMemberPage.jsx";
 
 const [loggedIn, setLoggedIn] = "admin";
 
@@ -43,6 +44,11 @@ const router = createBrowserRouter([
         path: "membership/:memberName",
         element: <EditMemberPage />,
       },
+      {
+        path: "membership/add member",
+        element: <AddMemberPage />,
+      },
+
       {
         path: "daily log",
         element: <DailyLogPage />,

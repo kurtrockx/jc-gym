@@ -1,7 +1,8 @@
 import { Link, useOutletContext } from "react-router-dom";
 import MainContentLayout from "../../layout/MainContentLayout";
 import editIcon from "../../assets/editIcon.png";
-import {MEMBERS} from '../../sampleMembers'
+import addMembersIcon from "../../assets/addMembersIcon.png";
+import { MEMBERS } from "../../sampleMembers";
 
 const CATEGORIES = [
   { category: "Name", flex: "flex-2" },
@@ -17,9 +18,29 @@ export default function MembershipPage() {
 
   return (
     <MainContentLayout pageTitle={pageTitle}>
+      <Header />
       <Categories />
       <MemberList />
     </MainContentLayout>
+  );
+}
+
+function Header() {
+  return (
+    <div className="flex flex-1 justify-between p-2">
+      <input
+        type="text"
+        placeholder="Search Member"
+        className="w-1/4 border bg-white px-2 py-2 outline-0"
+      />
+      <Link
+        to="add member"
+        className="flex rounded-xl bg-yellow-600 p-2 font-semibold"
+      >
+        <img src={addMembersIcon} alt="add member" />
+        <button className="">+ Members</button>
+      </Link>
+    </div>
   );
 }
 
