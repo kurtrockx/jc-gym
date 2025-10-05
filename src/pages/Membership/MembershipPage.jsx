@@ -1,6 +1,7 @@
 import { Link, useOutletContext } from "react-router-dom";
 import MainContentLayout from "../../layout/MainContentLayout";
 import editIcon from "../../assets/editIcon.png";
+import {MEMBERS} from '../../sampleMembers'
 
 const CATEGORIES = [
   { category: "Name", flex: "flex-2" },
@@ -9,44 +10,6 @@ const CATEGORIES = [
   { category: "Email", flex: "flex-3" },
   { category: "Contact Number", flex: "flex-1" },
   { category: "Edit", flex: "flex-1" },
-];
-
-const MEMBERS = [
-  {
-    name: "John Doe",
-    policyType: "Gold",
-    status: "Active",
-    email: "john.doe@example.com",
-    contactNumber: "123-456-7890",
-  },
-  {
-    name: "Jane Smith",
-    policyType: "Silver",
-    status: "Inactive",
-    email: "jane.smith@example.com",
-    contactNumber: "987-654-3210",
-  },
-  {
-    name: "Alice Johnson",
-    policyType: "Platinum",
-    status: "Active",
-    email: "alice.johnson@example.com",
-    contactNumber: "456-789-0123",
-  },
-  {
-    name: "Kurt Russell B. De Belen",
-    policyType: "Platinum",
-    status: "Active",
-    email: "kurtdebelen431@gmail.com",
-    contactNumber: "09817253562",
-  },
-  {
-    name: "Angelyn G. Gansad",
-    policyType: "Platinum",
-    status: "Active",
-    email: "aaronales.aaronales.asianinstitute@gmail.com",
-    contactNumber: "09817253562",
-  },
 ];
 
 export default function MembershipPage() {
@@ -102,7 +65,7 @@ function Client({ client }) {
       >
         {client.name}
       </h3>
-      <h3 className={`${clientDetailStyle} flex-1`}>{client.policyType}</h3>
+      <h3 className={`${clientDetailStyle} flex-1`}>{client.memberType}</h3>
       <h3 className={`${clientDetailStyle} flex-1`}>{client.status}</h3>
       <h3
         className={`${clientDetailStyle} flex-3 justify-start overflow-x-auto`}
