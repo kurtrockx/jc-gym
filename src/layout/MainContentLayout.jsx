@@ -11,7 +11,7 @@ export default function MainContentLayout({ pageTitle, children }) {
       >
         {pageTitle}
       </p>
-      <div className="flex-1 bg-black/20 overflow-y-scroll">{children}</div>
+      <div className="flex-1 overflow-y-auto bg-black/20">{children}</div>
     </div>
   );
 }

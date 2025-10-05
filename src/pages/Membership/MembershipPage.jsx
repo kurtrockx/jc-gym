@@ -1,5 +1,6 @@
 import { Link, useOutletContext } from "react-router-dom";
 import MainContentLayout from "../../layout/MainContentLayout";
+import editIcon from "../../assets/editIcon.png";
 
 const CATEGORIES = [
   { category: "Name", flex: "flex-2" },
@@ -33,88 +34,18 @@ const MEMBERS = [
     contactNumber: "456-789-0123",
   },
   {
-    name: "Bob Brown",
-    policyType: "Bronze",
-    status: "Inactive",
-    email: "bob.brown@example.com",
-    contactNumber: "321-654-9870",
-  },
-  {
-    name: "Charlie Davis",
-    policyType: "Gold",
-    status: "Active",
-    email: "charlie.davis@example.com",
-    contactNumber: "789-012-3456",
-  },
-  {
-    name: "John Doe",
-    policyType: "Gold",
-    status: "Active",
-    email: "john.doe@example.com",
-    contactNumber: "123-456-7890",
-  },
-  {
-    name: "Jane Smith",
-    policyType: "Silver",
-    status: "Inactive",
-    email: "jane.smith@example.com",
-    contactNumber: "987-654-3210",
-  },
-  {
-    name: "Alice Johnson",
+    name: "Kurt Russell B. De Belen",
     policyType: "Platinum",
     status: "Active",
-    email: "alice.johnson@example.com",
-    contactNumber: "456-789-0123",
+    email: "kurtdebelen431@gmail.com",
+    contactNumber: "09817253562",
   },
   {
-    name: "Bob Brown",
-    policyType: "Bronze",
-    status: "Inactive",
-    email: "bob.brown@example.com",
-    contactNumber: "321-654-9870",
-  },
-  {
-    name: "Charlie Davis",
-    policyType: "Gold",
-    status: "Active",
-    email: "charlie.davis@example.com",
-    contactNumber: "789-012-3456",
-  },
-  {
-    name: "John Doe",
-    policyType: "Gold",
-    status: "Active",
-    email: "john.doe@example.com",
-    contactNumber: "123-456-7890",
-  },
-  {
-    name: "Jane Smith",
-    policyType: "Silver",
-    status: "Inactive",
-    email: "jane.smith@example.com",
-    contactNumber: "987-654-3210",
-  },
-  {
-    name: "Alice Johnson",
+    name: "Angelyn G. Gansad",
     policyType: "Platinum",
     status: "Active",
-    email: "alice.johnson@example.com",
-    contactNumber: "456-789-0123",
-  },
-  {
-    name: "Bob Brown",
-    policyType: "Bronze",
-    status: "Inactive",
-    email: "bob.brown@example.com",
-    contactNumber: "321-654-9870",
-  },
-  {
-    name: "Charlie Davis",
-    policyType: "Gold",
-    status: "Active",
-    email: "charlie.davis@example.com",
-    contactNumber: "789-012-3456",
+    email: "aaronales.aaronales.asianinstitute@gmail.com",
+    contactNumber: "09817253562",
   },
 ];
 
@@ -166,10 +97,18 @@ function Client({ client }) {
 
   return (
     <div className="flex flex-1 border px-2">
-      <h3 className={`${clientDetailStyle} flex-2`}>{client.name}</h3>
+      <h3
+        className={`${clientDetailStyle} flex-2 justify-start overflow-x-auto`}
+      >
+        {client.name}
+      </h3>
       <h3 className={`${clientDetailStyle} flex-1`}>{client.policyType}</h3>
       <h3 className={`${clientDetailStyle} flex-1`}>{client.status}</h3>
-      <h3 className={`${clientDetailStyle} flex-3`}>{client.email}</h3>
+      <h3
+        className={`${clientDetailStyle} flex-3 justify-start overflow-x-auto`}
+      >
+        {client.email}
+      </h3>
       <h3 className={`${clientDetailStyle} flex-1`}>{client.contactNumber}</h3>
       <div
         className={`flex max-w-[20%] flex-1 items-center justify-center p-2 ${paddingResponsive} ${textResponsive}`}
@@ -184,8 +123,8 @@ function Client({ client }) {
 function ClientsButton({ clientName }) {
   return (
     <Link to={clientName}>
-      <button className="block cursor-pointer rounded-lg bg-green-700 px-2 py-1 font-semibold text-white duration-150 hover:-translate-y-0.5">
-        VIEW
+      <button className="block cursor-pointer font-semibold text-white duration-150 hover:-translate-y-0.5">
+        <img src={editIcon} alt="editIcon" className="max-xl:max-h-6" />
       </button>
     </Link>
   );
