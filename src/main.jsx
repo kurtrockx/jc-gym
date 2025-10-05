@@ -7,7 +7,13 @@ import {
 } from "react-router-dom";
 import "./index.css";
 import App from "./App.jsx";
-import DashboardPage from "./pages/DashboardPage.jsx";
+import Login from "./pages/Login.jsx";
+import DashboardPage from "./pages/Dashboard/DashboardPage.jsx";
+import LogSessionPage from "./pages/LogSession/LogSessionPage.jsx";
+import MembershipPage from "./pages/Membership/MembershipPage.jsx";
+import DailyLogPage from "./pages/DailyLog/DailyLogPage.jsx";
+import InventoryPage from "./pages/Inventory/InventoryPage.jsx";
+import RevenuePage from "./pages/Revenue/RevenuePage.jsx";
 
 const [loggedIn, setLoggedIn] = "admin";
 
@@ -23,6 +29,26 @@ const router = createBrowserRouter([
       {
         path: "dashboard",
         element: <DashboardPage />,
+      },
+      {
+        path: "log session",
+        element: <LogSessionPage />,
+      },
+      {
+        path: "membership",
+        element: <MembershipPage />,
+      },
+      {
+        path: "daily log",
+        element: <DailyLogPage />,
+      },
+      {
+        path: "inventory",
+        element: <InventoryPage />,
+      },
+      {
+        path: "revenue",
+        element: <RevenuePage />,
       },
     ],
   },
