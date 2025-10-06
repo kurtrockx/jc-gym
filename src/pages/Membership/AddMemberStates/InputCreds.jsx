@@ -1,5 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
+const status = ["Monthly", "Quarterly", "Annual"];
+const memberTypes = ["Student", "Regular", "VIP"];
+const waterMonthly = ["YES", "NO"];
 
 export default function InputCreds() {
   return (
@@ -10,11 +13,11 @@ export default function InputCreds() {
 
       <div className="flex w-full max-w-xl flex-col gap-3">
         <InputField label="Name:" />
-        <DropdownField label="Member Type:" />
-        <DropdownField label="Status:" />
+        <DropdownField label="Member Type:" options={memberTypes} />
+        <DropdownField label="Status:" options={status} />
         <InputField label="Contact:" />
         <InputField label="Email Address:" />
-        <DropdownField label="Water (Monthly):" />
+        <DropdownField label="Water (Monthly):" options={waterMonthly} />
 
         {/* Save Button */}
         <button className="w-full cursor-pointer rounded-md bg-black/80 py-2 text-sm font-semibold text-yellow-600 transition hover:bg-black/90 sm:text-base lg:text-lg">
@@ -42,14 +45,16 @@ function InputField({ label }) {
 }
 
 /* 🔸 Dropdown Field */
-function DropdownField({ label }) {
+function DropdownField({ label, options }) {
   return (
     <div className="flex flex-col gap-1 rounded-md bg-white p-2 shadow-sm">
       <label className="text-xs font-semibold sm:text-[12px] lg:text-lg">
         {label}
       </label>
       <select className="cursor-pointer rounded-md border border-neutral-600 p-1 text-xs text-gray-800 outline-0 sm:text-sm md:text-base lg:text-lg">
-        <option value="">Select...</option>
+        {options.map((option) => (
+          <option value={option}>{option}</option>
+        ))}
       </select>
     </div>
   );
