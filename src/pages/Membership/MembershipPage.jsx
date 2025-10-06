@@ -35,10 +35,10 @@ function Header() {
       />
       <Link
         to="add member"
-        className="flex rounded-xl bg-yellow-600 p-2 font-semibold"
+        className="flex cursor-pointer rounded-xl bg-yellow-600 p-2 font-semibold hover:brightness-95"
       >
         <img src={addMembersIcon} alt="add member" />
-        <button className="">+ Members</button>
+        <button className="cursor-pointer">+ Members</button>
       </Link>
     </div>
   );

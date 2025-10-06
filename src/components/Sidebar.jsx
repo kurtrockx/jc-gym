@@ -24,7 +24,7 @@ export default function Sidebar() {
       {pages.map((p) => (
         <NavLink
           key={p.name}
-          className="group relative flex w-full items-center justify-center rounded-xl hover:bg-white/20 md:px-2 md:py-1 lg:px-px lg:py-2.5"
+          className="group relative flex w-full items-center justify-center rounded-xl px-2 py-1 hover:bg-white/20 lg:px-px lg:py-2.5"
           to={p.name.toLowerCase()}
         >
           <img
