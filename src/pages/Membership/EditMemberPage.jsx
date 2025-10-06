@@ -91,14 +91,6 @@ export default function EditMemberPage() {
           >
             Save Changes
           </button>
-
-          {/* Back Link */}
-          <Link
-            to="/membership"
-            className="text-center text-xs text-gray-700 hover:text-black sm:text-sm md:text-base"
-          >
-            ← Back to Members
-          </Link>
         </div>
       </div>
     </MainContentLayout>
