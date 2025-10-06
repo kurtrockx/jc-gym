@@ -18,26 +18,31 @@ export default function MembershipPage() {
 
   return (
     <MainContentLayout pageTitle={pageTitle}>
-      <Header />
-      <Categories />
+      <div className="sticky top-0">
+        <Header />
+        <Categories />
+      </div>
       <MemberList />
     </MainContentLayout>
   );
 }
 
 function Header() {
+  const textResponsive = "2xl:text-sm max-2xl:text-[10px] ";
+  const paddingResponsive = "max-xl:px-1 max-xl:py-2 max-lg:px-0.5 py-2 px-0.5";
+
   return (
-    <div className="flex flex-1 justify-between p-2">
+    <div className="flex flex-1 justify-between bg-neutral-300 p-2">
       <input
         type="text"
         placeholder="Search Member"
-        className="w-1/4 border bg-white px-2 py-2 outline-0"
+        className={`w-1/4 border bg-white outline-0 ${textResponsive} ${paddingResponsive}`}
       />
       <Link
         to="add member"
-        className="flex cursor-pointer rounded-xl bg-yellow-600 p-2 font-semibold hover:brightness-95"
+        className={`flex cursor-pointer rounded-xl bg-yellow-600 p-2 font-semibold hover:brightness-95 ${textResponsive} `}
       >
-        <img src={addMembersIcon} alt="add member" />
+        <img src={addMembersIcon} alt="add member" className="h-4 2xl:h-10" />
         <button className="cursor-pointer">+ Members</button>
       </Link>
     </div>
@@ -50,7 +55,7 @@ function Categories() {
   const paddingResponsive = "max-xl:px-1 max-xl:py-2 max-lg:px-0.5 py-4";
 
   return (
-    <div className="sticky top-0 flex border border-[#450509] bg-neutral-600 px-4 font-semibold text-white shadow-sm">
+    <div className="flex border border-[#450509] bg-neutral-600 px-4 font-semibold text-white shadow-sm">
       {CATEGORIES.map((c, i) => (
         <h2
           key={i}
@@ -108,7 +113,11 @@ function ClientsButton({ clientName }) {
   return (
     <Link to={clientName}>
       <button className="block cursor-pointer font-semibold text-white duration-150 hover:-translate-y-0.5">
-        <img src={editIcon} alt="editIcon" className="max-xl:max-h-6" />
+        <img
+          src={editIcon}
+          alt="editIcon"
+          className="max-2xl:max-h-6 max-xl:max-h-4"
+        />
       </button>
     </Link>
   );

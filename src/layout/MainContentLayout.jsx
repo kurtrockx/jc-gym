@@ -6,9 +6,10 @@ export default function MainContentLayout({ pageTitle, children }) {
   const navigate = useNavigate();
   const pageTitleResponsive =
     "2xl:text-4xl xl:text-3xl lg:text-2xl md:text-xl sm:text-lg";
+  const gapResponsive = "gap-2 xl:gap-4 2xl:gap-10";
 
   return (
-    <div className="flex h-full flex-1 flex-col gap-10 p-10">
+    <div className={`flex h-full flex-1 flex-col p-10 ${gapResponsive}`}>
       <p
         className={`font-bold text-black/60 capitalize ${pageTitleResponsive}`}
       >
