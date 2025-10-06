@@ -48,7 +48,6 @@ const router = createBrowserRouter([
         path: "membership/add member",
         element: <AddMemberPage />,
       },
-
       {
         path: "daily log",
         element: <DailyLogPage />,
