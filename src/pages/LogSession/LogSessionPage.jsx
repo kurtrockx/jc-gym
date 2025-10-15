@@ -13,10 +13,12 @@ export default function LogSession({ rerender }) {
   return (
     <MainContentLayout pageTitle={pageTitle} rerender={true}>
       {memberState === "choices" && <Choices setMemberState={setMemberState} />}
-      <div className="flex h-full flex-1 items-center justify-center">
-        {memberState === "loading" && <Loader />}
-        {memberState === "inputLoginCreds" && <InputLoginCreds />}
-      </div>
+      {memberState !== "choices" && (
+        <div className="flex h-full flex-1 items-center justify-center">
+          {memberState === "loading" && <Loader />}
+          {memberState === "inputLoginCreds" && <InputLoginCreds />}
+        </div>
+      )}
     </MainContentLayout>
   );
 }

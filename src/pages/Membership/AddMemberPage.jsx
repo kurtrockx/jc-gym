@@ -12,7 +12,7 @@ export default function AddMemberPage() {
   const { pageTitle } = useOutletContext();
 
   //loading, facecam, studentID, inputCreds, inputPassword, emailNotif
-  const [memberState, setMemberState] = useState("loading");
+  const [memberState, setMemberState] = useState("facecam");
 
   return (
     <MainContentLayout pageTitle={pageTitle + " > Add Member"}>
