@@ -90,22 +90,42 @@ export default function InventoryPage({ rerender }) {
         {PRODUCTS.map((product, index) => (
           <li
             key={index}
-            className="m-4 flex flex-col items-center rounded-lg bg-white p-4 shadow-md"
+            className="m-4 flex flex-col items-center rounded-lg bg-[#ebebeb] p-4 shadow-md"
           >
+            <p className="mb-1 font-semibold text-gray-900">
+              Price: ${product.cost.toFixed(2)}
+            </p>
             <img
               src={product.imgSource}
               alt={product.name}
               className="mb-4 h-32 w-32 object-cover"
             />
-            <h2 className="mb-2 text-lg font-bold">{product.name}</h2>
-            <p className="mb-1 text-gray-700">{product.description}</p>
-            <p className="mb-1 font-semibold text-gray-900">
-              Price: ${product.cost.toFixed(2)}
-            </p>
-            <p className="text-gray-600">In Stock: {product.amountLeft}</p>
+            <Button />
           </li>
         ))}
       </ul>
     </MainContentLayout>
+  );
+}
+
+function Button({ children, amountLeft = 0, handleMinus, handlePlus }) {
+  return (
+    <div className={`w-full cursor-pointer rounded-xl px-4 font-bold`}>
+      <div className="grid grid-cols-3 gap-2 text-center">
+        <button
+          className="rounded-2xl bg-white shadow-lg"
+          onClick={handleMinus}
+        >
+          -
+        </button>
+        <p className="rounded-2xl bg-white shadow-lg"> {amountLeft}</p>
+        <button className="rounded-2xl bg-white shadow-lg" onClick={handlePlus}>
+          +
+        </button>
+        <button className="col-span-3 w-full rounded-2xl bg-white text-center font-semibold whitespace-nowrap shadow-lg">
+          ADD TO CART
+        </button>
+      </div>
+    </div>
   );
 }
