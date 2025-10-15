@@ -15,7 +15,7 @@ export default function MainContentLayout({ pageTitle, children, rerender = fals
       >
         {pageTitle}
       </p>
-      <Button onClick={() => rerender === true ? navigate(0) : navigate(-1)}>Go Back</Button>
+      <Button onClick={() => rerender === true ? navigate(0) : navigate(-1)}>{rerender ? "Refresh" : "Go Back"}</Button>
       <div className="flex-1 overflow-y-auto bg-black/20">{children}</div>
     </div>
   );
