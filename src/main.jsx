@@ -16,6 +16,7 @@ import InventoryPage from "./pages/Inventory/InventoryPage.jsx";
 import RevenuePage from "./pages/Revenue/RevenuePage.jsx";
 import EditMemberPage from "./pages/Membership/EditMemberPage.jsx";
 import AddMemberPage from "./pages/Membership/AddMemberPage.jsx";
+import EditItemPage from "./pages/Inventory/EditItemPage.jsx";
 
 const [loggedIn, setLoggedIn] = "admin";
 
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
       {
         path: "inventory",
         element: <InventoryPage />,
+      },
+      {
+        path: "inventory/edit/:itemName",
+        element: <EditItemPage />,
       },
       {
         path: "revenue",

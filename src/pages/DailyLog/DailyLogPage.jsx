@@ -148,14 +148,14 @@ export default function DailyLogPage({ rerender }) {
   const textResponsive = "2xl:text-sm max-2xl:text-[10px] ";
 
   return (
-    <MainContentLayout pageTitle={pageTitle} rerender={true}>
+    <MainContentLayout pageTitle={pageTitle} buttonShow={false}>
       <div className="sticky top-0 flex flex-col gap-8 bg-neutral-300 pt-4 font-semibold shadow-md">
-        <h1 className="w-full text-center text-4xl">Member's Information</h1>
+        <h1 className="w-full text-center text-4xl text-shadow-yellow-500 text-shadow-sm">Member's Information</h1>
         <ul className="grid grid-cols-7 text-2xl">
           {CATEGORIES.map((category, i) => (
             <li
               key={category}
-              className={`${i === 0 && "col-span-2"} border p-2 ${textResponsive}`}
+              className={`${i === 0 && "col-span-2"} border-r border-black/20 bg-yellow-500 p-2 ${textResponsive}`}
             >
               {category}
             </li>
