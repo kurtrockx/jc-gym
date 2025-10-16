@@ -1,7 +1,13 @@
 import { useParams } from "react-router-dom";
+import { PRODUCTS } from "../../sampleProducts";
 
 export default function EditItemPage() {
-  const { itemName } = useParams;
+  const { itemId } = useParams();
+  const item = PRODUCTS.find((product) => product.itemId === itemId);
 
-  return <div></div>;
+  return (
+    <div>
+      {item.name} = price of: {item.cost}
+    </div>
+  );
 }

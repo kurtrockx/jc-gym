@@ -1,7 +1,7 @@
 import { Link, useOutletContext } from "react-router-dom";
 import MainContentLayout from "../../layout/MainContentLayout";
 import editIcon from "../../assets/editIcon.png";
-import {PRODUCTS} from '../../sampleProducts'
+import { PRODUCTS } from "../../sampleProducts";
 
 export default function InventoryPage({ rerender }) {
   const { pageTitle } = useOutletContext();
@@ -14,8 +14,9 @@ export default function InventoryPage({ rerender }) {
             key={index}
             className="relative m-4 flex flex-col items-center rounded-lg bg-[#ebebeb] p-4 shadow-md"
           >
-            <p className="mb-1 font-semibold text-gray-900">
-              Price:{" "}
+            <p className="font-bold">{product.name}</p>
+            <p className="mb-1 flex gap-1 font-semibold text-gray-900">
+              Price:
               <span className="text-yellow-600">
                 ${product.cost.toFixed(2)}
               </span>
