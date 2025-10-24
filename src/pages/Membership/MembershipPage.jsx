@@ -6,8 +6,8 @@ import { MEMBERS } from "../../sampleMembers";
 
 const CATEGORIES = [
   { category: "Name", flex: "flex-2" },
-  { category: "Type", flex: "flex-1" },
   { category: "Membership", flex: "flex-1" },
+  { category: "Status", flex: "flex-1" },
   { category: "Email", flex: "flex-3" },
   { category: "Contact Number", flex: "flex-1" },
   { category: "Edit", flex: "flex-1" },

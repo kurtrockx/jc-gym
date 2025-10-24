@@ -15,7 +15,7 @@ const CATEGORIES = [
 const CLIENTS = [
   {
     Name: "John Doe",
-    Membership: "Gold",
+    Membership: "Full Month",
     Type: "Regular",
     Contact: "09171234567",
     "Time In": "2025-10-16T08:30:00",
@@ -23,47 +23,47 @@ const CLIENTS = [
   },
   {
     Name: "Jane Smith",
-    Membership: "Silver",
-    Type: "Walk-in",
+    Membership: "Half-Month",
+    Type: "Regular",
     Contact: "09283456789",
     "Time In": "2025-10-16T09:00:00",
     "Time Out": "2025-10-16T09:50:00",
   },
   {
     Name: "Carlos Reyes",
-    Membership: "Platinum",
-    Type: "Regular",
-    Contact: "09180001234",
+    Membership: "N/A",
+    Type: "Student",
+    Contact: "N/A",
     "Time In": "2025-10-16T07:45:00",
     "Time Out": "2025-10-16T10:10:00",
   },
   {
     Name: "Anna Lim",
-    Membership: "Basic",
-    Type: "Walk-in",
-    Contact: "09091234567",
+    Membership: "N/A",
+    Type: "Regular",
+    Contact: "N/A",
     "Time In": "2025-10-16T11:10:00",
     "Time Out": "2025-10-16T12:00:00",
   },
   {
     Name: "Patrick Cruz",
     Membership: "Gold",
-    Type: "Regular",
+    Type: "Student",
     Contact: "09995551234",
     "Time In": "2025-10-16T06:55:00",
     "Time Out": "2025-10-16T09:05:00",
   },
   {
     Name: "Sophia Dela Torre",
-    Membership: "Silver",
-    Type: "Regular",
+    Membership: "Quarterly",
+    Type: "Student",
     Contact: "09172345678",
     "Time In": "2025-10-16T10:20:00",
     "Time Out": "2025-10-16T12:45:00",
   },
   {
     Name: "John Doe",
-    Membership: "Gold",
+    Membership: "Annual",
     Type: "Regular",
     Contact: "09171234567",
     "Time In": "2025-10-16T08:30:00",
@@ -71,31 +71,31 @@ const CLIENTS = [
   },
   {
     Name: "Jane Smith",
-    Membership: "Silver",
-    Type: "Walk-in",
+    Membership: "N/A",
+    Type: "Regular",
     Contact: "09283456789",
     "Time In": "2025-10-16T09:00:00",
     "Time Out": "2025-10-16T09:50:00",
   },
   {
     Name: "Carlos Reyes",
-    Membership: "Platinum",
-    Type: "Regular",
+    Membership: "Full-Month",
+    Type: "Student",
     Contact: "09180001234",
     "Time In": "2025-10-16T07:45:00",
     "Time Out": "2025-10-16T10:10:00",
   },
   {
     Name: "Anna Lim",
-    Membership: "Basic",
-    Type: "Walk-in",
+    Membership: "Half-Month",
+    Type: "Regular",
     Contact: "09091234567",
     "Time In": "2025-10-16T11:10:00",
     "Time Out": "2025-10-16T12:00:00",
   },
   {
     Name: "Patrick Cruz",
-    Membership: "Gold",
+    Membership: "Annual",
     Type: "Regular",
     Contact: "09995551234",
     "Time In": "2025-10-16T06:55:00",
@@ -103,7 +103,7 @@ const CLIENTS = [
   },
   {
     Name: "Sophia Dela Torre",
-    Membership: "Silver",
+    Membership: "Half-Month",
     Type: "Regular",
     Contact: "09172345678",
     "Time In": "2025-10-16T10:20:00",
@@ -111,7 +111,7 @@ const CLIENTS = [
   },
   {
     Name: "Michael Tan",
-    Membership: "Platinum",
+    Membership: "Full-Month",
     Type: "Regular",
     Contact: "09223334444",
     "Time In": "2025-10-16T07:15:00",
@@ -119,15 +119,15 @@ const CLIENTS = [
   },
   {
     Name: "Liza Navarro",
-    Membership: "Basic",
-    Type: "Walk-in",
-    Contact: "09198887766",
+    Membership: "N/A",
+    Type: "Student",
+    Contact: "N/A",
     "Time In": "2025-10-16T08:00:00",
     "Time Out": "2025-10-16T09:00:00",
   },
   {
     Name: "Ryan Santos",
-    Membership: "Gold",
+    Membership: "Full-Month",
     Type: "Regular",
     Contact: "09337778888",
     "Time In": "2025-10-16T09:30:00",
@@ -135,9 +135,9 @@ const CLIENTS = [
   },
   {
     Name: "Bea Gutierrez",
-    Membership: "Silver",
-    Type: "Walk-in",
-    Contact: "09456667777",
+    Membership: "N/A",
+    Type: "Student",
+    Contact: "N/A",
     "Time In": "2025-10-16T10:45:00",
     "Time Out": "2025-10-16T11:20:00",
   },
@@ -150,7 +150,7 @@ export default function DailyLogPage({ rerender }) {
   return (
     <MainContentLayout pageTitle={pageTitle} buttonShow={false}>
       <div className="sticky top-0 flex flex-col gap-8 bg-neutral-300 pt-4 font-semibold shadow-md">
-        <h1 className="w-full text-center text-4xl text-shadow-yellow-500 text-shadow-sm">Member's Information</h1>
+        <h1 className="w-full text-center text-4xl text-shadow-yellow-500 text-shadow-sm">All Logs</h1>
         <ul className="grid grid-cols-7 text-2xl">
           {CATEGORIES.map((category, i) => (
             <li
