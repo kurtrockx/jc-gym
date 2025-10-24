@@ -37,10 +37,13 @@ export default function DashboardPage() {
               overall client’s session history.
             </h4>
           </div>
-          <div className="flex justify-center">
+          <div className="flex justify-between">
             <h4 className="max-w-[36%] flex-1 text-[#868686]">
               Revenue - Tracking overall revenue for a month, and year.
               Exclusive Admin access.
+            </h4>
+            <h4 className="max-w-[36%] flex-1 text-[#868686]">
+              Request - Gate access control for the protoype.
             </h4>
           </div>
           <div className="flex justify-between">

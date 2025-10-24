@@ -21,8 +21,8 @@ export default function EditMemberPage() {
   });
 
   // Dropdown options
-  const status = ["Monthly", "Quarterly", "Annual"];
-  const memberTypes = ["Student", "Regular", "VIP"];
+  const status = ["Half Month", "Monthly", "Quarterly", "Annual"];
+  const memberTypes = ["Student", "Regular"];
   const waterMonthly = ["YES", "NO"];
 
   // Handle input changes

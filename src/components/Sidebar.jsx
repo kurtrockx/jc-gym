@@ -13,6 +13,7 @@ const pages = [
   { name: "Daily Log", icon: dailyLogIcon },
   { name: "Inventory", icon: inventoryIcon },
   { name: "Revenue", icon: revenueIcon },
+  { name: "Request"},
 ];
 
 export default function Sidebar() {
