@@ -29,8 +29,16 @@ export default function Login() {
 
   const handleSubmit = () => {
     const entered = password.join("");
+
     if (entered === "123456") {
+      // ✅ Admin login
       setLoggedIn("admin");
+      localStorage.setItem("loggedIn", "admin");
+      navigate("/dashboard");
+    } else if (entered === "234567") {
+      // ✅ Server login
+      setLoggedIn("server");
+      localStorage.setItem("loggedIn", "server");
       navigate("/dashboard");
     } else {
       alert("Incorrect password. Try again.");

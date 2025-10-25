@@ -41,7 +41,11 @@ export default function Root() {
     {
       path: "/",
       element:
-        loggedIn === "admin" ? <App /> : <Navigate to="/login" replace />,
+        loggedIn === "admin" || loggedIn === "server" ? (
+          <App />
+        ) : (
+          <Navigate to="/login" replace />
+        ),
       children: [
         { index: true, element: <Navigate to="dashboard" replace /> },
         { path: "dashboard", element: <DashboardPage /> },
