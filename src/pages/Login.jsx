@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
-import cautionIcon from "../assets/cautionIcon.png";
+import gymLogo from "../assets/gymLogo.png";
 import AuthContext from "../context/AuthContext";
 
 export default function Login() {
@@ -48,8 +48,8 @@ export default function Login() {
 
   return (
     <div className="flex h-screen flex-col items-center justify-center gap-4">
-      <h2 className="text-center text-4xl font-semibold">INPUT PASSWORD</h2>
-      <img src={cautionIcon} alt="camera" className="max-w-80" />
+      <h1 className="text-center text-6xl font-semibold">J Cruz Goodhealth Gym</h1>
+      <img src={gymLogo} alt="camera" className="max-w-80 " />
       <div className="flex items-center gap-2 rounded-xl bg-neutral-500 px-4 py-2 text-white">
         <label>Enter Password:</label>
         {password.map((char, index) => (
